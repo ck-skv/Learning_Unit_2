@@ -68,3 +68,57 @@ Item 1 $200.0
 Item 2 $400.0
 Item 3 $600.0
 
+def enter_store():
+    item_1 = '200.0'
+    item_2 = '400.0'
+    item_3 = '600.0'
+    combo_1 = str((float(item_1) + float(item_2)) * 0.9)
+    store_products = (item_1, item_2, item_3)
+    print('What would you like to purchase today? Here is our selection:')
+    print(*store_products, sep='\n')
+
+    
+enter_store()
+What would you like to purchase today? Here is our selection:
+200.0
+400.0
+600.0
+def enter_store():
+    item_1 = '200.0'
+    item_2 = '400.0'
+    item_3 = '600.0'
+    combo_1 = str((float(item_1) + float(item_2)) * 0.9)
+    store_products = (item_1, item_2, item_3, combo_1)
+    print('What would you like to purchase today? Here is our selection:')
+    print(*store_products, sep='\n')
+
+    
+enter_store()
+What would you like to purchase today? Here is our selection:
+200.0
+400.0
+600.0
+540.0
+def enter_store():
+    item_1 = '200.0'
+    item_2 = '400.0'
+    item_3 = '600.0'
+    combo_1 = str((float(item_1) + float(item_2)) * 0.9)
+    combo_2 = str((float(item_2) + float(item_3)) * 0.9)
+    combo_3 = str((float(item_1) + float(item_3)) * 0.9)
+    combo_4 = str((float(item_1) + float(item_2) + float(item_3)) * 0.75)
+    store_products = (item_1, item_2, item_3, combo_1, combo_2, combo_3, combo_4)
+    print('What would you like to purchase today? Here is our selection:')
+    print(*store_products, sep='\n')
+
+    
+enter_store()
+What would you like to purchase today? Here is our selection:
+200.0
+400.0
+600.0
+540.0
+900.0
+720.0
+900.0
+
