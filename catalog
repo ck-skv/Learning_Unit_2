@@ -1,0 +1,70 @@
+def enter_store():
+    store_products = (item_1, item_2, item_3)
+    item_1 = 200.0
+    item_2 = 400.0
+    item_3 = 600.0
+    print('what would you like to purchase today? Here is our selection ' + store_products)
+
+    
+enter_store()
+Traceback (most recent call last):
+  File "<pyshell#9>", line 1, in <module>
+    enter_store()
+  File "<pyshell#8>", line 2, in enter_store
+    store_products = (item_1, item_2, item_3)
+UnboundLocalError: local variable 'item_1' referenced before assignment
+def enter_store():
+    item_1 = 200.0
+    item_2 = 400.0
+    item_3 = 600.0
+    store_products = (item_1, item_2, item_3)
+    print('what would you like to purchase today? Here is our selection ' + store_products)
+
+    
+enter_store()
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    enter_store()
+  File "<pyshell#11>", line 6, in enter_store
+    print('what would you like to purchase today? Here is our selection ' + store_products)
+TypeError: can only concatenate str (not "tuple") to str
+def enter_store():
+    item_1 = 'Item 1 $200.0'
+    item_2 = 'Item 2 $400.0'
+    item_3 = 'Item 3 $600.0'
+    store_products = (item_1, item_2, item_3)
+    print('what would you like to purchase today? Here is our selection ' + store_products)
+
+    
+enter_store()
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    enter_store()
+  File "<pyshell#14>", line 6, in enter_store
+    print('what would you like to purchase today? Here is our selection ' + store_products)
+TypeError: can only concatenate str (not "tuple") to str
+def enter_store():
+    item_1 = 'Item 1 $200.0'
+    item_2 = 'Item 2 $400.0'
+    item_3 = 'Item 3 $600.0'
+    store_products = (item_1, item_2, item_3)
+    print('what would you like to purchase today? Here is our selection ' + str(store_products))
+
+    
+enter_store()
+what would you like to purchase today? Here is our selection ('Item 1 $200.0', 'Item 2 $400.0', 'Item 3 $600.0')
+def enter_store():
+    item_1 = 'Item 1 $200.0'
+    item_2 = 'Item 2 $400.0'
+    item_3 = 'Item 3 $600.0'
+    store_products = (item_1, item_2, item_3)
+    print('what would you like to purchase today? Here is our selection:')
+    print(*store_products, sep='\n')
+
+    
+enter_store()
+what would you like to purchase today? Here is our selection:
+Item 1 $200.0
+Item 2 $400.0
+Item 3 $600.0
+
